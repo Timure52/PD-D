@@ -1,62 +1,83 @@
 Timur Nefedov, Veronica Pilupa
-🌲 Projekta apskats
-Laipni lūdzam Latvijas mežu projektu repozitorijā! Šī dokumentācija apraksta projekta struktūru, mērķi un ieguldījumu vadlīnijas, kas veltītas Latvijas mežu ainavas, ģeogrāfiskajiem datiem un dabas resursiem.
+🌲 1. Ievads un projekta vīzija
+Laipni lūdzam Latvijas mežu projektu repozitorijā! Šī dokumentācija ir izstrādāta, lai sniegtu pilnīgu priekšstatu par mūsu iniciatīvu, kuras mērķis ir dokumentēt, analizēt un veicināt sabiedrības izpratni par Latvijas mežu bagātībām.
 
-Latvija ir viena no mežainākajām valstīm Eiropā, kur meži klāj vairāk nekā 50% no valsts teritorijas. Šī projekta mērķis ir apkopot ģeogrāfiskos datus, veidot floras un faunas katalogu, kā arī izstrādāt rīkus vai izglītojošus materiālus par Latvijas mežu ekosistēmām.
+Latvija ir viena no zaļākajām un mežainākajām valstīm Eiropā — vairāk nekā puse no mūsu valsts teritorijas (ap 52%) ir klāta ar mežiem. Šis projekts kalpo kā digitāla platforma pētniekiem, dabas mīļotājiem, izstrādātājiem un vides aktīvistiem, kuri vēlas apvienot tehnoloģijas ar dabas zinātnēm. Mēs apkopojam ģeotelpiskos datus, veidojam floras un faunas katalogus, kā arī analizējam mežu ekosistēmu veselību un klimata pārmaiņu ietekmi.
 
-📂 Repozitorija struktūra
-Zemāk ir norādīta projekta repozitorija standarta struktūra:
+📂 2. Repozitorija arhitektūra un struktūra
+Mūsu projekts ir strukturēts tā, lai nodrošinātu ērtu koda uzturēšanu, datu glabāšanu un sadarbību starp dažādu jomu speciālistiem:
 
 Plaintext
 latvian-forests/
-├── 📁 data/                  # Dati (ģeotelpiskie dati, sugu saraksti, taku kartes)
-├── 📁 docs/                  # Paplašināta dokumentācija un ceļveži
-├── 📁 src/                   # Pirmkods (skripti, tīmekļa komponentes, analīzes rīki)
-├── 📁 assets/                # Attēli, ikonas un citi mediju faili
-├── 📄 README.md              # Projekta ievads un ātrais sākums
-├── 📄 CONTRIBUTING.md        # Vadlīnijas līdzautoriem un palīgiem
-└── 📄 LICENSE                # Informācija par atvērtā pirmkoda licenci
-🚀 Darba uzsākšana
-Lai klonētu un palaistu projektu savā datorā, veiciet šīs vienkāršās darbības:
+├── 📁 data/                  # Datu bāzes un ģeotelpiskie dati (GIS shapefiles, sugu saraksti)
+├── 📁 docs/                  # Padziļināti ceļveži, pētījumi un metodoloģija
+├── 📁 src/                   # Pirmkods (tīmekļa lietotnes, datu analīzes skripti Python/R)
+├── 📁 assets/                # Multivides faili (kartes, fotogrāfijas, ikonas, logotipi)
+├── 📁 scripts/               # Automatizācijas un datu apstrādes skripti
+├── 📄 README.md              # Projekta galvenais apraksts un instrukcijas
+├── 📄 CONTRIBUTING.md        # Detalizētas vadlīnijas jaunajiem dalībniekiem
+├── 📄 CODE_OF_CONDUCT.md     # Kopienas ētikas kodekss
+└── 📄 LICENSE                # Atvērtā pirmkoda licences noteikumi
+🚀 3. Uzstādīšana un darba vides sagatavošana
+Lai sāktu darbu ar projektu savā vietējā datorā, lūdzu, izpildiet šos soļus:
 
-Priekšnosacījumi
-Datorā jābūt instalētam Git.
+Sistēmas prasības
+Pārliecinieties, ka jūsu datorā ir instalēti sekojoši rīki:
 
-Node.js vai Python (atkarībā no tā, vai strādājat ar tīmekļa saskarni vai datu apstrādes skriptiem).
+Git (versija 2.30 vai jaunāka)
 
-Instalēšana
-Klonējiet repozitoriju:
+Node.js (versija 18.x vai jaunāka) — tīmekļa saskarnes un rīku darbināšanai
+
+Python (versija 3.10 vai jaunāka) — datu analīzei un ģeotelpiskajiem skriptiem
+
+Instalācijas soļi
+Klonējiet repozitoriju no GitHub:
 
 Bash
 git clone https://github.com/your-username/latvian-forests.git
-Atveriet projekta direktoriju:
+Pārvietojieties uz projekta mapi:
 
 Bash
 cd latvian-forests
-Instalējiet atkarības (ja nepieciešams):
+Instalējiet Node.js atkarības (ja strādājat ar frontend daļu):
 
 Bash
 npm install
-# vai Python bāzētiem projektiem:
+Iestatiet Python virtuālo vidi un instalējiet datu bibliotēkas (ja nepieciešams):
+
+Bash
+python -m venv venv
+source venv/bin/activate   # Uz Windows: venv\Scripts\activate
 pip install -r requirements.txt
-🗺️ Galvenās iespējas un datu avoti
-Ekosistēmu kartēšana: Ģeogrāfiskie dati, kas izseko mežu tipiem (priežu, egļu, bērzu un jauktie meži).
+🗺️ 4. Galvenie moduļi un datu avoti
+Projekts sastāv no vairākiem savstarpēji saistītiem virzieniem:
 
-Bioloģiskās daudzveidības katalogs: Informācija par vietējo floru, faunu un īpaši aizsargājamām dabas teritorijām (dabas liegumiem).
+Mežu tipoloģija un kartēšana: Izmantojot satelītdatus un atvērtos ģeotelpiskos avotus, mēs izsekojam dažādu mežu tipu izplatību (priežu sils, egļu damji, ošauti, jauktie meži).
 
-Rekreācijas takas: Dati un ceļveži par populārām tūrisma un pastaigu takām, ko pārvalda AS "Latvijas Valsts meži" (LVM).
+Bioloģiskā daudzveidība: Apkopoti dati par aizsargājamām sugām, mikroliegumiem un dabas parkiem, sadarbojoties ar publiski pieejamām dabas datu bāzēm (piemēram, Dabas dati).
 
-🤝 Kā piedalīties projektā
-Mēs labprāt sagaidām ieguldījumus no dabas entuziastiem, izstrādātājiem un pētniekiem!
+Rekreācijas infrastruktūra: Apkopota informācija par tūrismmalām, pastaigu takām, skatu torņiem un labiekārtotām ugunskuru vietām, ko uztur AS "Latvijas Valsts meži" un Dabas aizsardzības pārvalde.
 
-Izveidojiet projekta kopiju (Fork).
+🤝 5. Kā pievienoties un piedalīties izstrādē?
+Mēs ticam atvērtā koda un kopienas spēkam! Ja vēlaties palīdzēt projekta attīstībā:
 
-Izveidojiet savu funkcijas zaru (git checkout -b feature/AmazingFeature).
+Izveidojiet sava konta kopiju (Fork) šim repozitorijam.
 
-Saglabājiet izmaiņas (git commit -m 'Pievienota jauna funkcija').
+Izveidojiet jaunu atzaru (branch) savam uzdevumam:
 
-Nosūtiet izmaiņas uz savu zaru (git push origin feature/AmazingFeature).
+Bash
+git checkout -b feature/SuguKatalogsUzlabojums
+Veiciet nepieciešamās izmaiņas un saglabājiet tās:
 
-Atveriet Pull Request pieprasījumu.
+Bash
+git commit -m "Pievienoti jauni dati par priežu mežu aizsardzību"
+Nosūtiet izmaiņas uz savu GitHub kontu:
 
-Lūdzu, izlasiet failu CONTRIBUTING.md, lai iepazītos ar mūsu ētikas kodeksu un pull pieprasījumu iesniegšanas kārtību.
+Bash
+git push origin feature/SuguKatalogsUzlabojums
+Atveriet Pull Request mūsu galvenajā repozitorijā ar izmaiņu aprakstu.
+
+Pirms koda iesniegšanas, lūdzu, iepazīstieties ar CONTRIBUTING.md failu, lai ievērotu vienotus koda stilu un dokumentēšanas standartus.
+
+📄 6. Licence
+Šis projekts tiek izplatīts saskaņā ar MIT licenci. Tas nozīmē, ka jūs varat brīvi izmantot, modificēt un izplatīt šī projekta materiālus, norādot sākotnējo autorību. Sīkāku informāciju skatiet LICENSE failā.
