@@ -1,37 +1,30 @@
 Timur Nefedov, Veronica Pilupa
-🌲 1. Ievads un projekta vīzija
-Laipni lūdzam Latvijas mežu projektu repozitorijā! Šī dokumentācija ir izstrādāta, lai sniegtu pilnīgu priekšstatu par mūsu iniciatīvu, kuras mērķis ir dokumentēt, analizēt un veicināt sabiedrības izpratni par Latvijas mežu bagātībām.
+🌲 Par projektu
+Latvija ir viena no zaļākajām un mežainākajām valstīm Eiropā — meži klāj vairāk nekā 50% no mūsu valsts teritorijas. Šis projekts tika izveidots ar mērķi:
 
-Latvija ir viena no zaļākajām un mežainākajām valstīm Eiropā — vairāk nekā puse no mūsu valsts teritorijas (ap 52%) ir klāta ar mežiem. Šis projekts kalpo kā digitāla platforma pētniekiem, dabas mīļotājiem, izstrādātājiem un vides aktīvistiem, kuri vēlas apvienot tehnoloģijas ar dabas zinātnēm. Mēs apkopojam ģeotelpiskos datus, veidojam floras un faunas katalogus, kā arī analizējam mežu ekosistēmu veselību un klimata pārmaiņu ietekmi.
+Apvienot atvērtos ģeotelpiskos datus par Latvijas mežu tipiem un masīviem.
 
-📂 2. Repozitorija arhitektūra un struktūra
-Mūsu projekts ir strukturēts tā, lai nodrošinātu ērtu koda uzturēšanu, datu glabāšanu un sadarbību starp dažādu jomu speciālistiem:
+Veidot ērtu un pieejamu katalogu vietējai florai, faunai un aizsargājamajām dabas teritorijām.
 
-Plaintext
-latvian-forests/
-├── 📁 data/                  # Datu bāzes un ģeotelpiskie dati (GIS shapefiles, sugu saraksti)
-├── 📁 docs/                  # Padziļināti ceļveži, pētījumi un metodoloģija
-├── 📁 src/                   # Pirmkods (tīmekļa lietotnes, datu analīzes skripti Python/R)
-├── 📁 assets/                # Multivides faili (kartes, fotogrāfijas, ikonas, logotipi)
-├── 📁 scripts/               # Automatizācijas un datu apstrādes skripti
-├── 📄 README.md              # Projekta galvenais apraksts un instrukcijas
-├── 📄 CONTRIBUTING.md        # Detalizētas vadlīnijas jaunajiem dalībniekiem
-├── 📄 CODE_OF_CONDUCT.md     # Kopienas ētikas kodekss
-└── 📄 LICENSE                # Atvērtā pirmkoda licences noteikumi
-🚀 3. Uzstādīšana un darba vides sagatavošana
-Lai sāktu darbu ar projektu savā vietējā datorā, lūdzu, izpildiet šos soļus:
+Sniegt rīkus pētniekiem, studentiem un dabas entuziastiem vides datu analīzei.
 
-Sistēmas prasības
-Pārliecinieties, ka jūsu datorā ir instalēti sekojoši rīki:
+Tehnoloģiju steks
+Projekta izstrādē un datu apstrādē tiek izmantotas šādas tehnoloģijas un rīki:
 
-Git (versija 2.30 vai jaunāka)
+🚀 Sākšana (Getting Started)
+Lai palaistu šo projektu savā vietējā datorā izstrādes un testēšanas nolūkos, izpildiet šos vienkāršos soļus.
 
-Node.js (versija 18.x vai jaunāka) — tīmekļa saskarnes un rīku darbināšanai
+Priekšnosacījumi
+Pārliecinieties, ka datorā ir instalēts Git un nepieciešamās vides:
 
-Python (versija 3.10 vai jaunāka) — datu analīzei un ģeotelpiskajiem skriptiem
+Git
 
-Instalācijas soļi
-Klonējiet repozitoriju no GitHub:
+Node.js (v18+) un npm
+
+Python (v3.10+)
+
+Instalēšana
+Klonējiet repozitoriju:
 
 Bash
 git clone https://github.com/your-username/latvian-forests.git
@@ -39,45 +32,50 @@ Pārvietojieties uz projekta mapi:
 
 Bash
 cd latvian-forests
-Instalējiet Node.js atkarības (ja strādājat ar frontend daļu):
+Instalējiet npm pakotnes:
 
 Bash
 npm install
-Iestatiet Python virtuālo vidi un instalējiet datu bibliotēkas (ja nepieciešams):
+Palaidiet izstrādes serveri:
 
 Bash
-python -m venv venv
-source venv/bin/activate   # Uz Windows: venv\Scripts\activate
-pip install -r requirements.txt
-🗺️ 4. Galvenie moduļi un datu avoti
-Projekts sastāv no vairākiem savstarpēji saistītiem virzieniem:
+npm run dev
+💡 Lietošana
+Kad projekts ir palaists, jūs varat:
 
-Mežu tipoloģija un kartēšana: Izmantojot satelītdatus un atvērtos ģeotelpiskos avotus, mēs izsekojam dažādu mežu tipu izplatību (priežu sils, egļu damji, ošauti, jauktie meži).
+Pārlūkot kartes: Atvērt interaktīvās kartes, lai apskatītu valsts un privātos mežus.
 
-Bioloģiskā daudzveidība: Apkopoti dati par aizsargājamām sugām, mikroliegumiem un dabas parkiem, sadarbojoties ar publiski pieejamām dabas datu bāzēm (piemēram, Dabas dati).
+Analizēt datus: Izmantot iekļautos Python skriptus, lai iegūtu statistiku par koku sugām un mežizstrādes apjomiem.
 
-Rekreācijas infrastruktūra: Apkopota informācija par tūrismmalām, pastaigu takām, skatu torņiem un labiekārtotām ugunskuru vietām, ko uztur AS "Latvijas Valsts meži" un Dabas aizsardzības pārvalde.
+Pievienot datus: Ievietot jaunu informāciju par pastaigu takām un apskates objektiem.
 
-🤝 5. Kā pievienoties un piedalīties izstrādē?
-Mēs ticam atvērtā koda un kopienas spēkam! Ja vēlaties palīdzēt projekta attīstībā:
+🗺️ Ceļvedis (Roadmap)
+[x] Projekta pamata struktūras un README izveide
 
-Izveidojiet sava konta kopiju (Fork) šim repozitorijam.
+[x] Sākotnējo ģeotelpisko datu integrācija (/data mapē)
 
-Izveidojiet jaunu atzaru (branch) savam uzdevumam:
+[ ] Interaktīvās kartes saskarnes pilnveidošana ar Leaflet.js
 
-Bash
-git checkout -b feature/SuguKatalogsUzlabojums
-Veiciet nepieciešamās izmaiņas un saglabājiet tās:
+[ ] Automātiskās datu validācijas skriptu pievienošana
 
-Bash
-git commit -m "Pievienoti jauni dati par priežu mežu aizsardzību"
-Nosūtiet izmaiņas uz savu GitHub kontu:
+[ ] Mobilās lietotnes koncepta izstrāde
 
-Bash
-git push origin feature/SuguKatalogsUzlabojums
-Atveriet Pull Request mūsu galvenajā repozitorijā ar izmaiņu aprakstu.
+Skatīties atvērtos jautājumus (issues) pilnam plānoto uzdevumu sarakstam.
 
-Pirms koda iesniegšanas, lūdzu, iepazīstieties ar CONTRIBUTING.md failu, lai ievērotu vienotus koda stilu un dokumentēšanas standartus.
+🤝 Ieguldījums projektā
+Ieguldījumi ir tas, kas padara atvērtā koda kopienu tik brīnišķīgu vietu, kur mācīties, iedvesmoties un radīt. Jebkurš ieguldījums, ko veicat, tiek augsti novērtēts.
 
-📄 6. Licence
-Šis projekts tiek izplatīts saskaņā ar MIT licenci. Tas nozīmē, ka jūs varat brīvi izmantot, modificēt un izplatīt šī projekta materiālus, norādot sākotnējo autorību. Sīkāku informāciju skatiet LICENSE failā.
+Ja jums ir kāds ieteikums, kā uzlabot projektu, lūdzu, izveidojiet "fork" repozitorijam un iesniedziet "Pull Request". Varat arī vienkārši atvērt diskusiju vai kļūdas pieteikumu ("issue").
+
+Izveidojiet projekta kopiju (Fork)
+
+Izveidojiet savu funkcijas zaru (git checkout -b feature/AmazingFeature)
+
+Saglabājiet izmaiņas (git commit -m 'Add some AmazingFeature')
+
+Nosūtiet uz zaru (git push origin feature/AmazingFeature)
+
+Atveriet Pull Request
+
+📄 Licence
+Izplatīts saskaņā ar MIT licenci. Sīkāku informāciju skatiet LICENSE failā.
