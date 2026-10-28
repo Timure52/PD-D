@@ -1,1 +1,1 @@
-# PD-D
+Timur Nefedov, Veronica Pilupa
