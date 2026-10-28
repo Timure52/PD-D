@@ -1,4 +1,6 @@
 Timur Nefedov, Veronica Pilupa
+
+
 🌲 1. Par projektu
 Latvija ir viena no zaļākajām un mežainākajām valstīm Eiropā — meži klāj vairāk nekā 50% no mūsu valsts teritorijas. Šis projekts tika izveidots ar mērķi:
 
